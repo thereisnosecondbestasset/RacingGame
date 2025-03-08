@@ -1,0 +1,47 @@
+<div id="game-container">
+    <!-- STEP 1: 게임 선택 -->
+    <div id="step1" class="step">
+        <h2>🚴‍♂️🚤 게임을 선택하세요!</h2>
+        <button onclick="selectGame('cycle')">🚴‍♂️ 자전거 레이싱 (경륜)</button>
+        <button onclick="selectGame('boat')">🚤 보트 레이싱 (경정)</button>
+    </div>
+
+    <!-- STEP 2: 난이도 선택 -->
+    <div id="step2" class="step hidden">
+        <h2>🎯 난이도를 골라보세요!</h2>
+        <button onclick="selectDifficulty('easy')">🟢 쉬운 모드</button>
+        <button onclick="selectDifficulty('normal')">🔵 보통 모드</button>
+        <button onclick="selectDifficulty('hard')">🔴 고수 모드</button>
+    </div>
+
+    <!-- STEP 3: 베팅 방식 선택 -->
+    <div id="step3" class="step hidden">
+        <h2>💰 베팅 방식을 선택해주세요!</h2>
+        <div id="betting-options"></div>
+    </div>
+
+    <!-- STEP 4: 선수 선택 -->
+    <div id="step4" class="step hidden">
+        <h2 id="pick-message">선수를 선택하세요!</h2>
+        <div id="player-selection"></div>
+        <button id="confirm-btn" class="hidden" disabled onclick="confirmSelection()">베팅 확정</button>
+    </div>
+
+    <!-- STEP 5: 경주 진행 -->
+    <div id="step5" class="step hidden">
+        <h2>🏁 레이스가 시작됩니다!</h2>
+        <p>예측한 선수들이 결승선을 통과할까요?</p>
+        <div id="race-track" style="width: 100%; height: 400px;"></div>
+        <button onclick="startRace()">🚀 경주 시작</button>
+    </div>
+
+    <!-- STEP 6: 결과 -->
+    <div id="step6" class="step hidden">
+        <h2>🎉 결과 발표!</h2>
+        <p id="result-message"></p>
+        <button onclick="restartGame()">🔄 처음으로</button>
+    </div>
+
+    <!-- 뒤로 가기 버튼 -->
+    <button id="back-btn" class="hidden" onclick="goBack()">⬅ 뒤로 가기</button>
+</div>
